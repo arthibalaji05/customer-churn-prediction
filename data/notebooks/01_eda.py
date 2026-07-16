@@ -60,3 +60,25 @@ plt.legend()
 plt.savefig('charges_distribution.png')
 plt.close()
 print("   • Saved: charges_distribution.png")
+
+
+
+
+
+# 3. Create the Contract Type vs Churn Count Plot
+plt.figure(figsize=(8, 5))
+sns.countplot(data=df, x='Contract', hue='Churn', palette='Set2')
+
+# Add labels and titles
+plt.title('Churn Count by Contract Type')
+plt.xlabel('Contract Type')
+plt.ylabel('Number of Customers')
+plt.tight_layout()
+
+# Save the third chart
+plt.savefig('contract_churn_bar.png')
+plt.close()
+print("   • Saved: contract_churn_bar.png")
+
+
+
